@@ -1,0 +1,39 @@
+.navbar-label {
+height: 40px;
+width: 40px;
+border-radius: 40%;
+}
+
+.active-link {
+    font-weight:bold;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link.active-link{
+    color: rgb(255, 255, 255);
+}
+
+.dropdown-menu{
+    background-color: #212529;
+}
+
+.dropdown-item {
+    color: white;
+
+    &:hover{
+        color: #212529;
+    }
+}
+
+.dropdown-divider{
+    border-top:1px solid rgb(167, 160, 160);
+}
+
+.btn-outline-success{
+    color: white;
+    border: 1px solid white;
+
+    &:hover{
+        background-color: rgb(199, 191, 191);
+    }
+}
+

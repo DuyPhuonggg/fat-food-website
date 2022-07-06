@@ -1,0 +1,24 @@
+<!-- filter -->
+<div class="filter">
+    <a href="" class="filter-list">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
+            <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+        </svg>
+    </a>
+    <h1>Filter: </h1>
+    <a class="condition"> Name</a>
+</div>
+
+<!--List item -->
+<div class="bg">
+    <div class="row">
+        <div class="col-lg-3" *ngFor="let fd of drinkData;index as i; ">
+            <div class="foodbox" *ngIf="i<=11; ">
+                <img src="{{fd.foodImg}}" />
+                <h1>Name: {{fd.foodName}}</h1>
+                <p>ID_Product: {{fd.id}} <br> Price:{{fd.foodPrice}}</p> 
+                <a routerLink="#" class="buy">BUY NOW</a>         
+            </div>    
+        </div>
+    </div>
+</div>

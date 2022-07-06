@@ -1,0 +1,124 @@
+.bg{
+    background-color:rgba(0,0,0, 0.1);
+    width: 100%;
+    height: 800px;
+}
+.container{
+    position: absolute;
+    width: 70%;
+    height: 800px;
+    left: 14%;
+    background-color: white;
+}
+.container__box{
+    width: 100%;
+    height: 600px;
+    display: flex;
+}
+.container__img{
+    width: 50%;
+    height: 600px;
+}
+.container__img-main{
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.container__img-main img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 4px;
+    cursor:zoom-in;
+}
+.container__img-prev{
+ margin-top:10px ;
+ 
+}
+.container__img-slide{
+    display:inline-block;
+    width: 15%;
+    margin: 0 4px;
+    cursor: pointer;
+    border-radius: 4px;
+
+}
+.container__img-slide img{
+    width: 100%;
+    height: 60px;
+    object-fit: cover;  
+}
+.active{
+    border: 2px solid rgb(206, 10, 10);
+}
+
+// text//
+.container__text{
+    width: 50%;
+    height: 600px;
+    background-color: rgba(0,0,0, 0.1);
+    margin-top: 10px;
+    border-radius: 4px;
+}
+.container__header{
+
+    width: 100%;
+    height: 200px;
+}
+.container__body{
+
+    width: 100%;
+    height: 200px;
+    border: 1px solid black;
+
+}
+.container__footer{
+    width: 100%;
+    height: 200px;
+    border: 1px solid black;
+}
+.container__header-name{
+    height: 60px;
+    margin-top: 10px;
+}
+.container__header-details{
+    height: 80px;
+}
+.container__header-price{
+    height: 40px;
+}
+.container__header-report{
+    height: 20px ;
+}
+//////////// button ////////////////
+.btn{
+
+    width: 100%;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.btn-list{
+    background-color: rgb(251, 244, 244);
+    width: 100%;
+    height: 200px;
+}
+.btn-items{
+    background-color: rgb(26, 24, 24);
+    width: 50%;
+    height: 200px;
+    left: 50%;
+    position: absolute;
+}
+.btn-items .buy-now{
+    position: relative;
+    height: 50px;
+    background-color: black;
+}
+.btn-items .add-to-cart{
+    position: relative;
+    height: 50px;
+    background-color: black;
+}
+

@@ -1,0 +1,73 @@
+.banner{
+    height: 700px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.content{
+    top:50%;
+    left: 0;
+    transform: translate(13%,-74%);
+    position: relative;
+}
+.content h1{
+    color: #198754;
+    font-size: 60px;
+    font-weight: bold;
+    margin: 0;
+}
+.content a {
+    color: #198754;
+    text-decoration: none;
+    height: 44px;
+    background-color: white;
+    padding: 12px;
+    border-radius: 20px ;
+    position:absolute
+}
+.content a:hover{
+    background-color: #198754;
+    color: white;
+}
+.content .slide2{
+    color: #198754;
+    margin-top: 220px;
+}
+// slider
+#carouselExampleIndicators {
+    position:relative;
+    height: 100%;
+    width: 100%;
+}
+#carouselExampleIndicators .carousel-inner{
+    position: relative;
+    height:100%;
+    width: 100%;
+    background: #000;   
+}
+#carouselExampleIndicators .carousel-inner .carousel-item{
+    position:relative;
+    height:100%;
+    width: 100%;
+    background-image:url('../../../assets/img/banner.jpg') ;
+    background-size :cover;
+    background-position:center top;
+
+}
+#carouselExampleIndicators .carousel-inner .carousel-item:nth-child(2){
+    position:relative;
+    height:100%;
+    width: 100%;
+    background-image:url('../../../assets/img/slide1.jpg') ;
+    background-size :cover;
+    background-position:center;
+}
+#carouselExampleIndicators .carousel-inner .carousel-item:nth-child(3){
+    position:relative;
+    height:100%;
+    width: 100%;
+    background-image:url('../../../assets/img/food.jpg') ;
+    background-size :cover;
+    background-position:center;
+}
+

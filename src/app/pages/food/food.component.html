@@ -1,0 +1,86 @@
+<div class="bg">
+<!-- filter -->
+    <div class="filter">
+        <div class="header-filter">
+            <a class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
+                    <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
+                </svg>
+            </a>
+            <h4>Funnel fill </h4>
+        </div>
+        <div class="seperate"></div>
+        <div class="options-filter">
+            <div class="name-options">
+                <span class="text"> ID_Product</span>
+            </div>
+            <div class="checkbox-filter">
+                <label  class="checkbox-filter__control">
+                    <input type="radio" name="sort" (click)="statusSelectedByIdProduct(sortByIdLower)  ; sortByIdProduct()"/>
+                    <span class="text"> Low to high</span>
+                </label>
+            </div>
+            <div class="checkbox-filter">
+                <label  class="checkbox-filter__control">
+                    <input type="radio" name="sort" (click)="statusSelectedByIdProduct(sortByIdHigher) ; sortByIdProduct()"/>
+                    <span class="text"> High to low </span>
+                </label>
+            </div>
+            <div class="checkbox-filter">
+                <label  class="checkbox-filter__control">
+                    <input type="radio" name="sort" (click)="!none =none  ; noneSort()"/>
+                    <span class="text"> None</span>
+                </label>
+            </div>
+            <div class="name-options">
+                <span class="text"> Price</span> 
+            </div>
+            <div class="checkbox-filter">
+                <label class="checkbox-filter__control">
+                    <input type="radio" name="sort" (click)="statusSelectedByPrices(sortByPriceLower); sortByPrices()"/>
+                    <span class="text"> Low to high</span>
+                </label>
+            </div>
+            <div class="checkbox-filter">
+                <label class="checkbox-filter__control">
+                    <input type="radio" name="sort" (click)="statusSelectedByPrices(sortByPriceHigher); sortByPrices()"/>
+                    <span class="text"> High to low</span>
+                </label>
+            </div>
+            <div class="checkbox-filter">
+                <label class="checkbox-filter__control">
+                    <input type="radio" name="sort" (click)="!none = none; noneSort()"/>
+                    <span class="text"> None</span>
+                </label>
+            </div>
+        </div>
+    </div>   
+     <!--List item -->
+    <div class="content">
+        <div class="row">
+                <div class="col-lg-3" *ngFor="let fd of foodData;index as i; ">
+                    <div class="foodbox"  *ngIf="i<=11; ">
+                        <div class="infor">
+                            <img src="{{fd.foodImg}}" />
+                            <h1>Name: {{fd.foodName}}</h1>
+                            <p>ID_Product: {{fd.id}} <br> Price: {{fd.foodPrice}}<i class="bi bi-currency-dollar"></i></p> 
+                        </div>
+                        <div class="btn">
+                            <a routerLink="id" class="btn-item" >See more<i class="bi bi-search"></i></a>
+                            <a routerLink="#" class="btn-item">Buys now<i class="bi bi-cart-plus"></i></a>
+                        </div>         
+                    </div>    
+                </div>   
+        </div>
+        <div class="paginator">
+            <a class="carousel-control-prev" href="" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</div>
