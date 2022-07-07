@@ -1,5 +1,5 @@
 <div class="bg">
-<!-- filter -->
+<!-- Lọc -->
     <div class="filter">
         <div class="header-filter">
             <a class="icon">
@@ -55,23 +55,55 @@
             </div>
         </div>
     </div>   
-     <!--List item -->
+     <!--Danh mục sản phẩm -->
     <div class="content">
         <div class="row">
                 <div class="col-lg-3" *ngFor="let fd of foodData;index as i; ">
                     <div class="foodbox"  *ngIf="i<=11; ">
-                        <div class="infor">
-                            <img src="{{fd.foodImg}}" />
-                            <h1>Name: {{fd.foodName}}</h1>
-                            <p>ID_Product: {{fd.id}} <br> Price: {{fd.foodPrice}}<i class="bi bi-currency-dollar"></i></p> 
+                        <div class="foodbox__infor">
+                            <div class="foodbox__infor-image">
+                                <img src="{{fd.foodImg}}" />
+                            </div>
+                            <div class="foodbox__infor-text">
+                                <div class="foodbox__infor-text name">
+                                    <h1>Name: {{fd.foodName}}</h1>
+                                </div>
+                                <div class="foodbox__infor-text id-price">
+                                    <p>ID_Product: {{fd.id}} <br> Price: {{fd.foodPrice}}<i class="bi bi-currency-dollar"></i></p>
+                                </div>
+                                <div class="foodbox__infor-text icon">
+                                    <div class="foodbox__infor-text star-icon">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                        <i class="bi bi-star"></i>
+                                    </div>
+                                    <div class="foodbox__infor-text score">
+                                        3.5/5
+                                    </div>
+                                    <div class="foodbox__infor-text heart-icon">
+                                        <i class="bi bi-heart"></i>
+                                    </div>
+                                    <div class="foodbox__infor-text share-icon">
+                                        <i class="bi bi-share-fill"></i>
+                                    </div>
+                                </div>
+                            </div>     
                         </div>
-                        <div class="btn">
-                            <a routerLink="id" class="btn-item" >See more<i class="bi bi-search"></i></a>
-                            <a routerLink="#" class="btn-item">Buys now<i class="bi bi-cart-plus"></i></a>
+                        <div class="foodbox__button">
+                            <div class="foodbox__button see-more">
+                                <a type="button" routerLink="id"  >See more<i class="bi bi-search"></i></a>
+                            </div>
+                            <div class="foodbox__button buy-now">
+                                <a type="button" routerLink="#"   >Buys now<i class="bi bi-cart-plus"></i></a>
+                            </div>
+                            
                         </div>         
                     </div>    
                 </div>   
         </div>
+        <!--  hiển thị số trang  -->
         <div class="paginator">
             <a class="carousel-control-prev" href="" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
