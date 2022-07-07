@@ -16,6 +16,6 @@ export class OrderPageImageDirective {
       imageSlide[i].classList.remove("active");
     }
     this.element.nativeElement.parentElement.classList.add("active");
-    console.log(`1`);
+    
   }
 }

@@ -1,11 +1,13 @@
 <div class="bg">
   <div class="container">
     <div class="container__box">
+      <!-- khung ảnh -->
       <div class="container__img">
+        <!-- ảnh chính -->
         <div class="container__img-main">
           <img src="../assets/img/slide2.jpg" alt="Image1" id="preview" />
         </div>
-        
+        <!-- danh sách ảnh -->
         <div class="container__img-prev text-center">
           <span class="carousel-control-prev-icon" ><i class="bi bi-arrow-left-circle"></i></span>
           <div class="container__img-slide active">
@@ -26,7 +28,9 @@
           <span class="carousel-control-prev-icon" ><i class="bi bi-arrow-right-circle"></i></span>
         </div>
       </div>
+      <!-- thông tin sản phẩm -->
       <div class="container__text">
+        <!-- header -->
           <div class="container__header">
               <div class="container__header-name">
                 <h4 style="margin-left: 4px;">
@@ -39,22 +43,142 @@
                 </h6>
               </div>
               <div class="container__header-price">
-                <h6>Price: {{singleProduct.foodPrice}} </h6>
+                <h6 style="margin-left: 4px;">
+                  Price: {{singleProduct.foodPrice}} 
+                  <i class="bi bi-currency-dollar"></i>
+                </h6>
               </div>
               <div class="container__header-report">
-                
+                <div class="container__header-report icon">
+                  <div class="container__header-report star-icon">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                      <i class="bi bi-star"></i>
+                  </div>
+                  <div class="container__header-report score">
+                      3.5/5
+                  </div>
+                  <div class="container__header-report media-icon">
+                      <i class="bi bi-heart"></i>
+                      <i style="margin-left: 10px;"class="bi bi-share-fill"></i>
+                  </div>
+                </div>
               </div>
           </div>
+          <!-- body -->
           <div class="container__body">
-            
+            <!-- quantity product -->
+            <div class="container__footer-item" style="display:flex ;margin-top: 14px;">
+              <div class="container__footer-item" style="width: 95px;">
+                <h5 style="margin: 8px;"> Quantity</h5>
+              </div>
+              <div class="container__footer-quantity">
+                <form>
+                  <div class="value-button" id="decrease" (click)="decreaseValue()" value="Decrease Value">-</div>
+                  <input type="number" id="number" value="0" />
+                  <div class="value-button" id="increase" (click)="increaseValue()" value="Increase Value">+</div>
+                </form>
+              </div>
+            </div>
+            <!-- options -->
+              <div class="container__body-header"style="background-color:rgba(0,0,0,0.05);border-radius: 8px;">
+                <h4 style="margin: 0;margin-left: 4px;"> Additional Options</h4>
+              </div>
+              <div class="container__body-options" style="margin: 0;">
+                <div class="container__body-text" style="background-color: white;">
+                  <h5 style="margin: 8px;"> Name </h5>
+                </div>
+                <div class="contain_body-price" style="background-color: white;">
+                  <h5 style="margin: 8px;">Price</h5>
+                </div>
+                <div class="contain_body-quantity" >
+                  <h5 style="margin: 8px 33px 8px 44px;"> Quantity</h5>
+                </div>
+              </div>
+              <div class="container__body-options">
+                <div class="container__body-text">
+                  <h5 style="margin: 8px;">More Rice </h5>
+                </div>
+                <div class="contain_body-price">
+                  <h5 style="margin: 8px;">500 $</h5>
+                </div>
+                <div class="contain_body-quantity">
+                  <form>
+                    <div class="value-button" id="decrease" (click)="decreaseValue()" value="Decrease Value">-</div>
+                    <input type="number" id="number" value="0" />
+                    <div class="value-button" id="increase" (click)="increaseValue()" value="Increase Value">+</div>
+                  </form>
+                </div>
+              </div>
+              <div class="container__body-options">
+                <div class="container__body-text">
+                  <h5 style="margin: 8px;">More Edge </h5>
+                </div>
+                <div class="contain_body-price">
+                  <h5 style="margin: 8px;">20 $</h5>
+                </div>
+                <div class="contain_body-quantity">
+                  <form>
+                    <div class="value-button" id="decrease" (click)="decreaseValue()" value="Decrease Value">-</div>
+                    <input type="number" id="number" value="0" />
+                    <div class="value-button" id="increase" (click)="increaseValue()" value="Increase Value">+</div>
+                  </form>
+                </div>
+              </div>
+              <div class="container__body-options">
+                <div class="container__body-text">
+                  <h5 style="margin: 8px;">More Potato </h5>
+                </div>
+                <div class="contain_body-price">
+                  <h5 style="margin: 8px;">900 $</h5>
+                </div>
+                <div class="contain_body-quantity">
+                  <form>
+                    <div class="value-button" id="decrease" (click)="decreaseValue()" value="Decrease Value">-</div>
+                    <input type="number" id="number" value="0" />
+                    <div class="value-button" id="increase" (click)="increaseValue()" value="Increase Value">+</div>
+                  </form>
+                </div>
+              </div>
+              <div class="container__body-options">
+                <div class="container__body-text">
+                  <h5 style="margin: 8px;">More Beef </h5>
+                </div>
+                <div class="contain_body-price">
+                  <h5 style="margin: 8px;">100 $</h5>
+                </div>
+                <div class="contain_body-quantity">
+                  <form>
+                    <div class="value-button" id="decrease" (click)="decreaseValue()" value="Decrease Value">-</div>
+                    <input type="number" id="number" value="0" />
+                    <div class="value-button" id="increase" (click)="increaseValue()" value="Increase Value">+</div>
+                  </form>
+                </div>
+              </div>
+              <!-- Total cost-->
+              <div class="container__body-options" style="margin: 0;">
+                <div class="container__body-text" style="background-color: white;">
+                  <h5 style="margin: 8px;"> Total price</h5>
+                </div>
+                <div class="contain_body-price" style="background-color: white;">
+                  <h5 style="margin: 8px;"> =</h5>
+                </div>
+                <div class="contain_body-quantity" >
+                  <h5 style="margin: 8px 33px 8px 44px;"> 0 $</h5>
+                </div>
+              </div>
           </div>
+          <!-- button -->
           <div class="container__footer">
-            
+            <button type="button" class="container__footer-button">
+              <span class="container__footer-text">Buy now</span>
+            </button>
+            <button type="button" class="container__footer-button">
+              <span class="container__footer-text">Add to cart</span>
+            </button>
           </div>
       </div>
-    </div>
-    <div class="btn">
-
-    </div>
   </div>
 </div>
