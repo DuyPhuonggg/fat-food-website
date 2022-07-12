@@ -13,11 +13,13 @@ export class FoodComponent implements OnInit {
   sortByPriceHigher: boolean = false;
   sortByPriceLower: boolean = false;
   none: boolean = false;
-  constructor(private service: OrderDetailService) { }
 
-  foodData:any;
+  foodData: any;
+  constructor(private service: OrderDetailService) {}
+
   ngOnInit() {
     this.foodData = this.service.foodDetails.filter(v => v.type === 'food');
+
   }
   // Status selected Id Product
   statusSelectedByIdProduct(status:boolean){

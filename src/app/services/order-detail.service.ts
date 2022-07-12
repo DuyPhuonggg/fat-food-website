@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { map, Observable, of, shareReplay } from 'rxjs';
+import { Food } from '../interface/food';
 
 @Injectable({
   providedIn: 'root'
@@ -7,8 +9,6 @@ export class OrderDetailService {
 
   constructor() { }
 
-  // food details
-  icon:string=`$`;
   foodDetails= [
     {
       id:6,
@@ -347,4 +347,14 @@ export class OrderDetailService {
       type:"fruit",
     },
   ]
+
+  get foodDetail(){
+    return of<any[]> (
+      this.foodDetails
+      ).pipe(shareReplay(1));
+  }
+
+  getFoodById(id:number): Observable<any>{
+    return this.foodDetail.pipe(map(foods => foods.find(ar => ar.id === id)));
+  }
 }
