@@ -17,14 +17,16 @@ export class OrderPageComponent implements OnInit {
     private readonly route: ActivatedRoute,
   ) {}
 
-  singleProduct:any;
-  // id:number ;
+  id:any;
+
+  singleProducts:any;
   ngOnInit(): void {
-    this.singleProduct = this.route.params.pipe(
+
+    this.id = this.route.params.pipe(
       pluck('id'),
-      switchMap(id => this.service.getFoodById(id))
     );
-    //  this.singleProduct = this.service.foodDetails.find(v => v.id === this.id);
+
+     this.singleProducts = this.service.foodDetails.find(v => v.id === this.id);
   }
 
   increaseValue() {
