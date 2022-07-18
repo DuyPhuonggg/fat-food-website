@@ -19,6 +19,7 @@ import { ModalComponent } from './pages/modal/modal.component';
 import { OrderPageComponent } from './pages/order-page/order-page.component';
 import { NgxImgZoomModule } from 'ngx-img-zoom';
 import { OrderPageImageDirective } from './pages/order-page/order-page-image.directive';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -41,9 +42,10 @@ import { OrderPageImageDirective } from './pages/order-page/order-page-image.dir
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     ReactiveFormsModule,
     NgxImgZoomModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
