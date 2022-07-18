@@ -1,1 +1,66 @@
-<p>cart works!</p>
+<div class="cart-page" style="height:1100px; overflow:scroll">
+    <div class="container">
+        <!-- <div class="card card-search">
+            <nav class="navbar bg-light">
+                <div class="container-fluid">
+                  <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                </div>
+              </nav>
+        </div> -->
+        <div class="card card-body">
+            <a routerLink="/menu" class=" add-items" >
+                <span  style="width: 150px;font-weight: 600;position: relative;top: 11px;font-size: 19px;"> Add more items</span>
+            </a>
+            <div class="card card-table">
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col" style="text-align: center;">Image</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col" style="text-align: center;">Quantity</th>
+                        <th scope="col" style="text-align: center;">Sub Total</th>
+                        <th scope="col" style="text-align: center;">Edit</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let getCartDetail of getCartDetails">
+                        <th scope="row" class="row-item" style="font-size: 18px;">{{getCartDetail.id}}</th>
+                        <td style="text-align: center;"><img src="{{getCartDetail.foodImg}}" alt="P1" ></td>
+                        <td class="row-item" style="text-align: left;">{{getCartDetail.foodName}}</td>
+                        <td class="row-item" style="text-align: left;">{{getCartDetail.foodPrice}} $</td>
+                        <td class="row-item">
+                          <form>
+                            <div class="value-button" id="decrease"  (click)="decQnt(getCartDetail.id,getCartDetail.qnt)"  value="Decrease Value">-</div>
+                            <input type="number" id="number" value="{{getCartDetail.qnt}}" />
+                            <div class="value-button" id="increase" (click)="incQnt(getCartDetail.id,getCartDetail.qnt)" value="Increase Value">+</div>
+                        </form>
+                        </td>
+                        <td class="row-item">{{getCartDetail.foodPrice*getCartDetail.qnt | number}} $</td>
+                        <td class="row-item">
+                          <div type="button" class="remove-one-item" (click)="removeSingleProduct(getCartDetail.id)">
+                            <i class="bi bi-trash-fill" style="margin: 8px 0px 0px -7px;position: absolute;"></i>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="row" style="margin-top: 10px;">
+              <div class="col-md-6">
+                <span> Total: {{total}}$</span>
+              </div>
+              <div class="col-md-6 text-right">
+                <button type="button" class="remove-all" (click)="removeAll()" >
+                  <i class="bi bi-trash-fill"></i>
+                  <span> Remove All</span>
+                </button>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

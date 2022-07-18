@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OrderDetailService } from 'src/app/services/order-detail.service';
+import { AuthService } from 'src/app/modules/_service/auth.service';
 
 @Component({
   selector: 'app-food',
@@ -13,11 +14,16 @@ export class FoodComponent implements OnInit {
   sortByPriceHigher: boolean = false;
   sortByPriceLower: boolean = false;
   none: boolean = false;
-  constructor(private service: OrderDetailService) { }
 
-  foodData:any;
+  foodData: any;
+  constructor(
+    private service: OrderDetailService,
+    private auth: AuthService
+    ) {}
+
   ngOnInit() {
     this.foodData = this.service.foodDetails.filter(v => v.type === 'food');
+
   }
   // Status selected Id Product
   statusSelectedByIdProduct(status:boolean){
@@ -82,5 +88,82 @@ export class FoodComponent implements OnInit {
     console.log('none')
     this.foodData = this.service.foodDetails.filter(v => v.type === 'food');
   }
+
+  inc(fd:any) {
+    // let increaseValue:any = document.getElementById("number");
+    
+    // let value:number = parseInt(increaseValue.value, 10);
+    
+    // value = isNaN(value) ? 0 : value;
+    // if(value<99 && value !== fd.qnt ) {
+    //   fd.qnt = value;
+    // }
+    // else{
+    //   fd.qnt+=1;
+    //   value=fd.qnt;
+    // }
+    // increaseValue.value = value;
+    fd.qnt+=1;
+  }
+
+  dec(fd:any) {
+    // let decreaseValue:any = document.getElementById("number");
+    
+    // var value:number = parseInt(decreaseValue.value, 10);
+    
+    // value = isNaN(value) ? 0 : value;
+    // if(value>0 && value !== fd.qnt ) {
+    //   fd.qnt = value;
+    // }
+    // else{
+    //   fd.qnt-=1;
+    //   value=fd.qnt;
+    // }
+    // decreaseValue.value = value;
+    if(fd.qnt != 1){
+      fd.qnt-=1;
+    }
+   
+  }
+
+  itemsCart:any = [];
+  addCart(category:any){
+    console.log(category);
+    let cartDataNull = localStorage.getItem('localCart');
+    if(cartDataNull == null ){
+      let storeDataGet:any = [];
+      storeDataGet.push(category);
+      localStorage.setItem('localCart',JSON.stringify(storeDataGet));
+    } else {
+      var id = category.id;
+      let index:number = -1;
+      this.itemsCart = JSON.parse(localStorage.getItem('localCart')!);
+      console.log(this.itemsCart);
+      for( let i=0; i<this.itemsCart.length; i++){
+        if(id == this.itemsCart[i].id){
+          this.itemsCart[i].qnt = category.qnt;
+         
+          index = i;
+          break;
+        }
+      }
+      if(index == -1){
+        this.itemsCart.push(category);
+        localStorage.setItem('localCart', JSON.stringify(this.itemsCart));
+      } else {
+        localStorage.setItem('localCart', JSON.stringify(this.itemsCart));
+      }
+    }
+    this.cartNumberFunc();
+  }
+
+  cartNumber:number = 0;
+
+  cartNumberFunc(){
+    var cartValue = JSON.parse(localStorage.getItem('localCart')!);
+    this.cartNumber = cartValue.length;
+    this.auth.cartSubject.next(this.cartNumber);
+  }
 }
+
  

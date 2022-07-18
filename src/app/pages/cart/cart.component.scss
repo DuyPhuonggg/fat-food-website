@@ -1,0 +1,100 @@
+.add-items {
+    height: 52px;
+    width: 176px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-bottom:12px;
+    text-align: center;
+    background-color: var(--third-color);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+
+    &:hover{
+        color: var(--third-color);
+        border: 1px solid var(--third-color);
+        background: var(--primary-color);
+    }
+}
+button{
+    width: 120px;
+    background-color: var(--third-color);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 4px;
+
+    &:hover{
+        color: var(--third-color);
+        border: 1px solid var(--third-color);
+        background: var(--primary-color)
+    }
+}
+img{
+    height: 120px;
+    width: 150px;
+    border-radius: 2px;
+    object-fit: cover;
+}
+.row-item{
+    text-align: center;
+    padding: 58px 16px 0px 16px;
+    position: relative;
+
+}
+.remove-one-item{
+    height: 40px;
+    width: 42px;
+    border: 1px solid red;
+    border-radius: 4px;
+    margin-left: 24px;
+    color: red;
+    background-color: var(--third-color);
+    &:hover{
+        background-color: rgb(250, 154, 154);
+    }
+}
+//quantity//
+form {
+    text-align: center;
+    height: 30px;
+  }
+  
+  .value-button {
+    display: inline-block;
+    // border: 1px solid #ddd;
+    margin: 0px;
+    width: 34px;
+    height: 30px;
+    text-align: center;
+    // vertical-align: middle;
+    padding: 3px 0;
+    background: rgb(173, 170, 170);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .value-button:hover {
+    cursor: pointer;
+  }
+  form #input-wrap {
+    margin: 0px;
+    padding: 0px;
+  }
+  input#number {
+    text-align: center;
+    border: none;
+    // border-top: 1px solid #ddd;
+    // border-bottom: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    height: 30px;
+  }
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }

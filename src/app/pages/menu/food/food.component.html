@@ -69,7 +69,7 @@
                                     <h1>Name: {{fd.foodName}}</h1>
                                 </div>
                                 <div class="foodbox__infor-text id-price">
-                                    <p>ID_Product: {{fd.id}} <br> Price: {{fd.foodPrice}}<i class="bi bi-currency-dollar"></i></p>
+                                    <p style="margin: 8px 1px 8px 1px">ID_Product: {{fd.id}} <br> Price: {{fd.foodPrice}}<i class="bi bi-currency-dollar"></i></p>
                                 </div>
                                 <div class="foodbox__infor-text icon">
                                     <div class="foodbox__infor-text star-icon">
@@ -89,14 +89,21 @@
                                         <i class="bi bi-share-fill"></i>
                                     </div>
                                 </div>
+                                <div class="foodbox_infor-text quantity">
+                                    <form>
+                                        <div class="value-button" id="decrease" (click)="dec(fd)" value="Decrease Value">-</div>
+                                        <input type="number" id="number" value="{{fd.qnt}}" />
+                                        <div class="value-button" id="increase" (click)="inc(fd)"value="Increase Value">+</div>
+                                    </form>
+                                </div>
                             </div>     
                         </div>
                         <div class="foodbox__button">
                             <div class="foodbox__button see-more">
-                                <a type="button" routerLink="id"  >See more<i class="bi bi-search"></i></a>
+                                <a type="button" routerLink="id" value="fd.id" >See more<i class="bi bi-search"></i></a>
                             </div>
                             <div class="foodbox__button buy-now">
-                                <a type="button" routerLink="#"   >Buys now<i class="bi bi-cart-plus"></i></a>
+                                <a type="button"  (click)="addCart(fd)" >Buys now<i class="bi bi-cart-plus"></i></a>
                             </div>
                             
                         </div>         

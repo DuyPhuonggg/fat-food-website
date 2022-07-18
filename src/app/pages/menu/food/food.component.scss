@@ -74,8 +74,8 @@ input{
 
 }
 .col-lg-3{
-    max-width: 300px;
-    height: 478px;
+    max-width: 396px;
+    height: 520px;
     &:hover{
         box-shadow: 0 0.125rem 0.125rem 0 rgb(0 0 0 / 5%);
         transform: translateY(-.125rem);
@@ -87,15 +87,14 @@ input{
     padding: 10px 5px;
     border: 2px solid black;
     border-radius: 16px;
-    height: 450px;
-    width: 267.3px;
+    height: 500px;
+    width: 362.3px;
 }
 .foodbox__infor{
     margin:0;
-    height: 390px;
+    height: 440px;
 }
 .foodbox__infor-image{
-    width: 253.3px;
     height: 250px;
 }
 .foodbox__infor-image img {
@@ -106,7 +105,6 @@ input{
     border-radius: 5px;
 }
 .foodbox__infor-text{
-    width: 253.3px; 
     height: 120px;
 }
 .foodbox__infor-text .name{
@@ -120,7 +118,7 @@ input{
    margin-left: 2px;
 }
 .foodbox__infor-text .id-price{
-    height: 50px;
+    height: 54px;
 }
 .foodbox__infor-text .id-price p{
    margin: 0;
@@ -130,6 +128,8 @@ input{
     background-color: #eeecec;
     border-radius: 2px;
     display:flex;
+    margin-top: 1px;
+    margin-bottom: 1px;
 }
 .foodbox__infor-text .star-icon {
     width: 60%;
@@ -147,20 +147,21 @@ input{
     width: 10%;
     height: 23px;
 }
+.foodbox__infor-text .quantity{
+    height: 30px;
+    margin: 7px 0 7px 0;
+}
 
 .foodbox__button{
     margin: 0;
     padding: 0;
-    width: 253.3px;
     height: 49px;
     display: flex;
 }
 .foodbox__button .see-more{
-    width: 50%;
     height: 49px;
 }
 .foodbox__button .buy-now{
-    width: 50%;
     height: 49px;
 }
 .foodbox__button a {
@@ -168,10 +169,12 @@ input{
     text-decoration: none;
     height: 40px;
     background-color: rgb(239, 239, 239);
-    padding: 8px;
+    padding: 6px;
     border: 2px solid black;
     border-radius: 20px ;
-    margin:0 10px 0 10px;
+    margin: 0px 6px 0 6px;
+    width: 160px;
+    text-align: center;
 }
 .foodbox__button a:hover{
     background-color: #198754;
@@ -191,3 +194,50 @@ input{
     height: 40px;
     background-color: rgba(0, 0, 0, 0.3);
 }
+
+//quantity//
+form {
+    text-align: center;
+    height: 30px;
+  }
+  
+  .value-button {
+    display: inline-block;
+    // border: 1px solid #ddd;
+    margin: 0px;
+    width: 34px;
+    height: 30px;
+    text-align: center;
+    // vertical-align: middle;
+    padding: 3px 0;
+    background: #eee;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .value-button:hover {
+    cursor: pointer;
+    background:rgb(183, 182, 182);
+  }
+  form #input-wrap {
+    margin: 0px;
+    padding: 0px;
+  }
+  input#number {
+    text-align: center;
+    border: none;
+    // border-top: 1px solid #ddd;
+    // border-bottom: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    height: 30px;
+  }
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }

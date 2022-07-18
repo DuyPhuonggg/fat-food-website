@@ -4,9 +4,9 @@ import { AboutComponent } from './pages/about/about.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './pages/menu/menu.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { DrinkComponent } from './pages/drink/drink.component';
-import { FoodComponent } from './pages/food/food.component';
-import { FruitComponent } from './pages/fruit/fruit.component';
+import { DrinkComponent } from './pages/menu/drink/drink.component';
+import { FoodComponent } from './pages/menu/food/food.component';
+import { FruitComponent } from './pages/menu/fruit/fruit.component';
 import { HelpsComponent } from './pages/helps/helps.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { ModalComponent } from './pages/modal/modal.component';
@@ -18,16 +18,10 @@ const routes: Routes = [
   {path:'contact',component:ContactComponent},
   {
     path: 'menu',
-    children: [{
+    children: [
+    {
       path: 'food',
-      children:[{
-        path:':id',
-        component:OrderPageComponent,
-      },
-      {
-        path:'',
-        component:FoodComponent,
-      }]   
+      component: FoodComponent
     },
     {
       path: 'drink',
@@ -44,6 +38,7 @@ const routes: Routes = [
   },
   {path:'helps',component:HelpsComponent},
   {path:'cart',component:CartComponent},
+  {path:'order-food/:id', component:OrderPageComponent},
 ];
 
 @NgModule({

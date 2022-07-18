@@ -1,4 +1,6 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { filter, pluck, switchMap } from 'rxjs';
 import { OrderDetailService } from 'src/app/services/order-detail.service';
 
 @Component({
@@ -10,14 +12,21 @@ export class OrderPageComponent implements OnInit {
 
   
   constructor(
-    private service: OrderDetailService,
-    private element:ElementRef
+    private readonly service: OrderDetailService,
+    // private readonly element: ElementRef,
+    private readonly route: ActivatedRoute,
   ) {}
 
-  singleProduct:any;
-  id:number = 1;
-  ngOnInit(): void {  
-     this.singleProduct = this.service.foodDetails.find(v => v.id === this.id);
+  id:any;
+
+  singleProducts:any;
+  ngOnInit(): void {
+
+    this.id = this.route.params.pipe(
+      pluck('id'),
+    );
+
+     this.singleProducts = this.service.foodDetails.find(v => v.id === this.id);
   }
 
   increaseValue() {

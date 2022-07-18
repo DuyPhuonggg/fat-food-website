@@ -34,17 +34,17 @@
           <div class="container__header">
               <div class="container__header-name">
                 <h4 style="margin-left: 4px;">
-                  Name: {{singleProduct.foodName}}
+                  Name: {{singleProducts.foodName}}
                 </h4>
               </div>
               <div class="container__header-details">
                 <h6 style="margin-left: 4px;">
-                  Details: {{singleProduct.foodDetails}}
+                  Details: {{singleProducts.foodDetails}}
                 </h6>
               </div>
               <div class="container__header-price">
                 <h6 style="margin-left: 4px;">
-                  Price: {{singleProduct.foodPrice}} 
+                  Price: {{singleProducts.foodPrice}} 
                   <i class="bi bi-currency-dollar"></i>
                 </h6>
               </div>
@@ -77,7 +77,7 @@
               <div class="container__footer-quantity">
                 <form>
                   <div class="value-button" id="decrease" (click)="decreaseValue()" value="Decrease Value">-</div>
-                  <input type="number" id="number" value="0" />
+                  <input type="number" id="number" value="singleProducts.qnt" />
                   <div class="value-button" id="increase" (click)="increaseValue()" value="Increase Value">+</div>
                 </form>
               </div>

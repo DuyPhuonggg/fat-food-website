@@ -7,8 +7,6 @@ export class OrderDetailService {
 
   constructor() { }
 
-  // food details
-  icon:string=`$`;
   foodDetails= [
     {
       id:6,
@@ -17,6 +15,7 @@ export class OrderDetailService {
       foodPrice: 13413,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"food",
+      qnt:1,
     },
     {
       id:2,
@@ -25,6 +24,7 @@ export class OrderDetailService {
       foodPrice: 100,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"drink",
+      qnt:1,
     },
     {
       id:3,
@@ -33,6 +33,7 @@ export class OrderDetailService {
       foodPrice: 11111,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"fruit",
+      qnt:1,
     },
     {
       id:4,
@@ -41,6 +42,7 @@ export class OrderDetailService {
       foodPrice: 4444,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"fruit",
+      qnt:1,
     },
     {
       id:12,
@@ -49,6 +51,7 @@ export class OrderDetailService {
       foodPrice: 2100,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"food",
+      qnt:1,
     },
     {
       id:5,
@@ -57,6 +60,7 @@ export class OrderDetailService {
       foodPrice: 5555,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"drink",
+      qnt:1,
     },
     {
       id:1,
@@ -65,6 +69,7 @@ export class OrderDetailService {
       foodPrice: 10000 ,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"food",
+      qnt:1,
     },
     {
       id:7,
@@ -73,6 +78,7 @@ export class OrderDetailService {
       foodPrice: 124124,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"drink",
+      qnt:1,
     },
     {
       id:9,
@@ -81,6 +87,7 @@ export class OrderDetailService {
       foodPrice: 5342321,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"fruit",
+      qnt:1,
     },
     {
       id:10,
@@ -89,6 +96,7 @@ export class OrderDetailService {
       foodPrice: 12111,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"food",
+      qnt:1,
     },
     {
       id:11,
@@ -97,6 +105,7 @@ export class OrderDetailService {
       foodPrice: 11,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"food",
+      qnt:1,
     },
     {
       id:8,
@@ -105,6 +114,7 @@ export class OrderDetailService {
       foodPrice: 1242,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"food",
+      qnt:1,
     },
     {
       id:13,
@@ -113,6 +123,7 @@ export class OrderDetailService {
       foodPrice: 1200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"food",
+      qnt:1,
     },
     {
       id:14,
@@ -121,6 +132,7 @@ export class OrderDetailService {
       foodPrice: 2200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"food",
+      qnt:1,
     },
     {
       id:15,
@@ -129,6 +141,7 @@ export class OrderDetailService {
       foodPrice: 2200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"food",
+      qnt:1,
     },
     {
       id:16,
@@ -137,6 +150,7 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"food",
+      qnt:1,
     },
     {
       id:17,
@@ -145,6 +159,7 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"drink",
+      qnt:1,
     },
     {
       id:18,
@@ -153,6 +168,7 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"drink",
+      qnt:1,
     },
     {
       id:19,
@@ -161,6 +177,7 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"drink",
+      qnt:1,
     },
     {
       id:20,
@@ -169,6 +186,7 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"fruit",
+      qnt:1,
     },
     {
       id:21,
@@ -177,6 +195,7 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"drink",
+      qnt:1,
     },
     {
       id:22,
@@ -185,6 +204,7 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"drink",
+      qnt:1,
     },
     {
       id:23,
@@ -193,6 +213,7 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"drink",
+      qnt:1,
     },
     {
       id:24,
@@ -201,6 +222,7 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"drink",
+      qnt:1,
     },
     {
       id:25,
@@ -209,6 +231,7 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"drink",
+      qnt:1,
     },
     {
       id:26,
@@ -217,6 +240,7 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"fruit",
+      qnt:1,
     },
     {
       id:27,
@@ -225,6 +249,7 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"fruit",
+      qnt:1,
     },
     {
       id:28,
@@ -233,6 +258,7 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"drink",
+      qnt:1,
     },
     {
       id:29,
@@ -241,6 +267,7 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"fruit",
+      qnt:1,
     },
     {
       id:30,
@@ -249,6 +276,7 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"fruit",
+      qnt:1,
     },
     {
       id:31,
@@ -257,6 +285,7 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"fruit",
+      qnt:1,
     },
     {
       id:22,
@@ -265,6 +294,7 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"fruit",
+      qnt:1,
     },
     {
       id:222,
@@ -273,6 +303,7 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"fruit",
+      qnt:1,
     },
     {
       id:2822,
@@ -281,6 +312,7 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"fruit",
+      qnt:1,
     },
     {
       id:281,
@@ -289,6 +321,7 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"fruit",
+      qnt:1,
     },
     {
       id:28223,
@@ -297,6 +330,7 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"fruit",
+      qnt:1,
     },
     {
       id:282,
@@ -305,6 +339,7 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"fruit",
+      qnt:1,
     },
     {
       id:284,
@@ -313,6 +348,7 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"fruit",
+      qnt:1,
     },
     {
       id:283,
@@ -321,6 +357,7 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"fruit",
+      qnt:1,
     },
     {
       id:222,
@@ -329,6 +366,7 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"fruit",
+      qnt:1,
     },
     {
       id:212,
@@ -337,6 +375,7 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"fruit",
+      qnt:1,
     },
     {
       id:33,
@@ -345,6 +384,13 @@ export class OrderDetailService {
       foodPrice: 3200,
       foodImg:"../../../assets/img/slide2.jpg",
       type:"fruit",
+      qnt:1,
     },
   ]
+
+  getFoodById(id:number){
+    return this.foodDetails.find(ar => ar.id === id);
+  }
+
+  
 }
