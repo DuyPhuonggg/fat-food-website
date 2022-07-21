@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OrderDetailService } from 'src/app/services/order-detail.service';
-import { AuthService } from 'src/app/modules/_service/auth.service';
+import { AuthService } from 'src/app/modules/auth/_service/auth.service';
 
 @Component({
   selector: 'app-food',

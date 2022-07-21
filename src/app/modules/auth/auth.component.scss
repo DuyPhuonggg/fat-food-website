@@ -1,0 +1,77 @@
+.auth-background{
+    background-color: rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.auth-inner{
+    position: fixed;
+    height: 750px;
+    width: 90%;
+    left: 5%;
+    top: 25px;
+    display: flex;
+    border-radius: 4px;
+    background-color: var(--third-color);
+}
+.auth-body{
+    position: absolute;
+    height: 100%;
+}
+.left-side{
+    position: relative;
+    width: 60%;
+}
+.right-side{
+    position: relative;
+    width: 40%;
+}
+.auth-body-inside{
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    top: 5%;
+    bottom: 5%;
+}
+#carouselExampleSlidesOnly {
+    position:relative;
+    height: 100%;
+    width: 100%;
+    
+}
+#carouselExampleSlidesOnly .carousel-inner{
+    position: relative;
+    height:100%;
+    width: 100%;
+    border-radius: 4px ;  
+}
+#carouselExampleSlidesOnly .carousel-inner .carousel-item{
+    position:relative;
+    border-radius: 4px ;
+    height:100%;
+    width: 100%; 
+    background-size :cover;
+    background-position:center;
+    background-image:url('../../../assets/img/auth-4.jpg')
+}
+#carouselExampleSlidesOnly .carousel-inner .carousel-item:nth-child(2){
+    position:relative;
+    border-radius: 4px ;
+    height:100%;
+    width: 100%; 
+    background-size :cover;
+    background-position:center;
+    background-image:url('../../../assets/img/auth-5.jpg')
+}
+#carouselExampleSlidesOnly .carousel-inner .carousel-item:nth-child(3){
+    position:relative;
+    border-radius: 4px ;
+    height:100%;
+    width: 100%; 
+    background-size :cover;
+    background-position:center;
+    background-image:url('../../../assets/img/auth-6.jpg')
+}
+

@@ -1,0 +1,53 @@
+<div class="main">
+  <form method="POST" class="form" [formGroup]="loginForm" id="form-1" (ngSubmit)="submitForm()">
+    <h3 class="heading">ĐĂNG NHẬP</h3>
+    <div class="spacer"></div>
+    <div class="form-group">
+      <label for="username" class="form-label">Tài khoản</label>
+      <input type="text" class="form-control" id="username" name="username"
+        formControlName="username" [class.is-invalid]="isControlInvalid('username')">
+      <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
+          validation: 'required',
+          message: 'Tên đăng nhập không được bỏ trống!',
+          control: loginForm.controls['username']
+        }"></ng-container>
+    </div>
+    <div class="form-group">
+      <label for="password" class="form-label">Mật khẩu</label>
+      <input type="password" class="form-control" id="password" name="password"
+        formControlName="password" [class.is-invalid]="isControlInvalid('password')">
+      <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
+          validation: 'required',
+          message: 'Mật khẩu không được bỏ trống!',
+          control: loginForm.controls['password']
+        }"></ng-container>
+    </div>
+    <div class="form-group ">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="checkbox">Nhớ mật khẩu</label>
+    </div>
+    <div class="btn-submit">
+      <button class="form-submit">Đăng Nhập</button>
+      <p>{{errorMessage}}</p>
+    </div>
+    <div class="another">
+      <ul style="list-style: none; display:flex; right: 0; ">
+        <li style="margin-right:5px"><a routerLink="/auth/registration">Đăng kí </a></li>
+        <div class="seperate"></div>
+        <li style="margin-left: 5px"><a routerLink="/auth/forgot-password">Quên mật khẩu ?</a></li>
+      </ul>
+    </div>
+  </form>
+</div>
+
+
+
+<ng-template #formError let-control="control" let-message="message" let-validation="validation">
+  <ng-container *ngIf="control.hasError(validation) && (control.dirty || control.touched)">
+    <div class="fv-plugins-message-container">
+      <div class="fv-help-block" style="color: #e14f5d;position: relative; text-align: left; margin-top: 10px;">
+        {{ message }}
+      </div>
+    </div>
+  </ng-container>
+</ng-template>

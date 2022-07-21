@@ -3,31 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './sharepage/navbar/navbar.component';
-import { FooterComponent } from './sharepage/footer/footer.component';
-import { HomeComponent } from './pages/home/home.component';
-import { MenuComponent } from './pages/menu/menu.component';
-import { AboutComponent } from './pages/about/about.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { FoodComponent } from './pages/menu/food/food.component';
-import { DrinkComponent } from './pages/menu/drink/drink.component';
-import { FruitComponent } from './pages/menu/fruit/fruit.component';
-import { HelpsComponent } from './pages/helps/helps.component';
-import { CartComponent } from './pages/cart/cart.component';
+import { AboutComponent } from './pages/_layout/about/about.component';
+import { ContactComponent } from './pages/_layout/contact/contact.component';
+import { FoodComponent } from './pages/_layout/menu/food/food.component';
+import { DrinkComponent } from './pages/_layout/menu/drink/drink.component';
+import { FruitComponent } from './pages/_layout/menu/fruit/fruit.component';
+import { HelpsComponent } from './pages/_layout/helps/helps.component';
+import { CartComponent } from './pages/_layout/cart/cart.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalComponent } from './pages/modal/modal.component';
-import { OrderPageComponent } from './pages/order-page/order-page.component';
+import { OrderPageComponent } from './pages/_layout/order-page/order-page.component';
 import { NgxImgZoomModule } from 'ngx-img-zoom';
-import { OrderPageImageDirective } from './pages/order-page/order-page-image.directive';
+import { OrderPageImageDirective } from './pages/_layout/order-page/order-page-image.directive';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthService } from './modules/auth/_service/auth.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    FooterComponent,
-    HomeComponent,
-    MenuComponent,
     AboutComponent,
     ContactComponent,
     FoodComponent,
@@ -47,7 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  KEYCLOAK_CLIENT_ID: 'frontend',
+  KEYCLOAK_REALM: 'bfms',
+  apiDevUrl: 'https://api-dev.smartlogbfms.com'
 };
 
 /*

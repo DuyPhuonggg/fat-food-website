@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NgxImgZoomService } from "ngx-img-zoom";
 
 @Component({
   selector: 'app-root',
