@@ -5,6 +5,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    display: flex;
 }
 .auth-inner{
     position: fixed;
@@ -12,7 +13,7 @@
     width: 90%;
     left: 5%;
     top: 25px;
-    display: flex;
+    
     border-radius: 4px;
     background-color: var(--third-color);
 }
